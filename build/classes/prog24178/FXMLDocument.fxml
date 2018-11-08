@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane hgap="10" vgap="10" prefHeight="400" fx:id="gridPane" prefWidth="600" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prog24178.FXMLDocumentController">
+    <children>
+        
+        <!--Row 1-->
+        <Label text="Movie Tracker" GridPane.columnIndex="1" GridPane.halignment="CENTER"/>
+        
+        <!--Row 2-->        
+        <Label text="ID:" fx:id="lblID" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.halignment="RIGHT"/>
+        <TextField fx:id="txtID" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.halignment="CENTER"/>
+        
+        <!--Row 3-->
+        <Label text="Title:" fx:id="lblTitle" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.halignment="RIGHT"/>
+        <TextField fx:id="txtTitle" GridPane.columnIndex="2" GridPane.rowIndex="3"   GridPane.halignment="CENTER"/>
+        
+        <!--Row 4-->
+        <Label text="Year:" fx:id="lblYear" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.halignment="RIGHT"/>
+        <TextField fx:id="txtYear" GridPane.columnIndex="2" GridPane.rowIndex="4"   GridPane.halignment="CENTER"/>
+
+        <!--Row 5-->
+        <Label text="Runtime:" fx:id="lblRuntime" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.halignment="RIGHT"/>
+        <TextField fx:id="txtRuntime" GridPane.columnIndex="2" GridPane.rowIndex="5"   GridPane.halignment="CENTER"/>
+        
+        <!--Row 6-->
+        <Label text="Ticket Price:" fx:id="lblPrice" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.halignment="RIGHT"/>
+        <TextField fx:id="txtPrice" GridPane.columnIndex="2" GridPane.rowIndex="6"   GridPane.halignment="CENTER"/>
+        
+        <!--Row 7-->
+        <Label text="Genre:" fx:id="lblGenre" GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.halignment="RIGHT"/>
+        <ComboBox fx:id="cmbGenre" promptText="Select Genre" GridPane.columnIndex="2" GridPane.rowIndex="7" GridPane.halignment="CENTER"/>
+        
+        <!--Row 8-->
+        <HBox GridPane.columnIndex="2" GridPane.rowIndex="8" alignment="center">
+            <children>
+                <Button text="Search" fx:id="btnSearch" onAction="#onSearch" GridPane.rowIndex="8" GridPane.columnIndex="1" GridPane.halignment="RIGHT"/>
+                <Button text="Add" fx:id="btnSubmit" onAction="#onSubmit" GridPane.rowIndex="8" GridPane.columnIndex="2" GridPane.halignment="CENTER"/>
+                <Button text="Delete" fx:id="btnDelete" onAction="#onDelete" GridPane.rowIndex="8" GridPane.columnIndex="3" GridPane.halignment="CENTER"/>
+                <Button text="Edit" fx:id="btnEdit" onAction="#onEdit" GridPane.rowIndex="8" GridPane.columnIndex="4" GridPane.halignment="CENTER"/>
+                <Button text="View Movies" fx:id="btnView" onAction="#onViewMovies" GridPane.rowIndex="8" GridPane.columnIndex="5" GridPane.halignment="CENTER"/>
+                <Button text="Clear" fx:id="btnClear" onAction="#onClear" GridPane.rowIndex="8" GridPane.columnIndex="6" GridPane.halignment="CENTER"/>
+            </children>
+        </HBox>
+        <!--Row 9-->
+        <Label text="" fx:id="lblHoldSpace" GridPane.columnIndex="1" GridPane.rowIndex="9" GridPane.halignment="RIGHT"/>
+        
+        <!--Row 10-->
+        <!--To place a previous record button here-->
+        
+        <Label text="Output:" fx:id="lblError" GridPane.columnIndex="1" GridPane.rowIndex="10" GridPane.halignment="RIGHT"/>
+        <Label text="This is an error message!" fx:id="lblErrorDisplay" GridPane.columnIndex="2" GridPane.rowIndex="10" GridPane.halignment="CENTER"/>
+        <!--To place a next record button here-->
+        
+        <!--Row 12 -->
+       <HBox GridPane.columnIndex="2" GridPane.rowIndex="12" alignment="center" >
+            <children>
+                <Button text="|&lt;" fx:id="first" onAction="#onFirst" GridPane.rowIndex="12" GridPane.columnIndex="1"/>
+                <Button text="&lt;" fx:id="previous" onAction="#onPrevious" GridPane.rowIndex="12" GridPane.columnIndex="2"/> 
+                <Button text="&gt;" fx:id="next" onAction="#onNext" GridPane.rowIndex="12" GridPane.columnIndex="3"/> 
+                <Button text="&gt;|" fx:id="last" onAction="#onLast" GridPane.rowIndex="12" GridPane.columnIndex="4"/> 
+            </children>
+         </HBox>
+        <Label text="Record:" GridPane.columnIndex="1" GridPane.rowIndex="13" GridPane.halignment="RIGHT"/>
+        <Label text="" fx:id="lblRecord" GridPane.columnIndex="2" GridPane.rowIndex="13" GridPane.halignment="CENTER"/>
+
+    </children>
+</GridPane>
+
+
